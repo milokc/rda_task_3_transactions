@@ -6,10 +6,10 @@ VALUES ('AwersomeProduct', 'Our Awersome Product', 2.5, 10);
 INSERT INTO Customers (FirstName, LastName, Email, Address)
 VALUES ('John', 'Doe', 'doe@home.com', 'HOBO');
 
-START TRANSACTION;
 INSERT INTO Orders (CustomerID, Date)
 VALUES (1, '2023-01-01');
 
+START TRANSACTION;
 INSERT INTO OrderItems (OrderID, ProductID, Count)
 VALUES (LAST_INSERT_ID(), 1, 1);
 
